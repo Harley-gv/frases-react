@@ -2,7 +2,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+    display: flex;
+    margin-top: 50%;
 }
 
 .card {
@@ -10,13 +16,11 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   background: #fff;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  margin-top: 16%;
-  margin-left: 20%;
-  max-width: 50%;
-  text-align: center;
   justify-content: center;
+  align-items: center;
 }
 
 
