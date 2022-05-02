@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import users from '../quotes.json';
+import data from '../quotes.json';
 import '../App.css'
 import '../Button.css'
 
@@ -9,11 +9,11 @@ const colors = ["red", "lightblue", "yellow", "lightgreen", "lightcoral"]
 
 const QuoteBox = () => {
 
-    const randomIndex = Math.floor(Math.random() * users.length)
+    const randomIndex = Math.floor(Math.random() * data.length)
     const [ index, setIndex ] = useState(randomIndex)
 
     const changeUser = () => {
-        const randomIndex = Math.floor(Math.random() * users.length);
+        const randomIndex = Math.floor(Math.random() * data.length);
         setIndex(randomIndex);
     }
 
@@ -21,13 +21,13 @@ const QuoteBox = () => {
     document.body.style = `background: ${colors[randomColor]}`;
     
 
-    console.log(users);
+    //console.log(data);
 
 
     return (
         <div className="card" style={{color: colors[randomColor]}}>
-            <p>{users[index].quote}</p>
-            <b>{users[index].author}</b>
+            <p>{data[index].quote}</p>
+            <b>{data[index].author}</b>
 
             <button onClick={changeUser} style={{background: colors[randomColor]}}>
                <i class='bx bx-chevron-right'></i>
